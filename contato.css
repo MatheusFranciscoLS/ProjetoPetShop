@@ -1,11 +1,14 @@
+/* Estilos para o corpo da página */
 body {
     background-color: rgba(20, 181, 55, 0.2);
 }
 
+/* Estilos para a classe 'total' */
 .total {
     align-items: center;
 }
 
+/* Estilos para a classe 'tipos' */
 .tipos {
     margin-left: 70vh;
     display: flex;
@@ -15,6 +18,7 @@ body {
     font-size: 15px;
 }
 
+/* Estilos para a classe 'informacoes' */
 .informacoes {
     margin-left: 10%;
     display: flex;
@@ -25,6 +29,7 @@ body {
     font-size: 15px;
 }
 
+/* Estilos para a classe 'informacoes2' */
 .informacoes2 {
     margin-right: 10%;
     display: flex;
@@ -35,6 +40,7 @@ body {
     font-size: 15px;
 }
 
+/* Estilos para a classe 'faleConosco' */
 .faleConosco {
     margin-left: 10%;
     display: flex;
@@ -44,6 +50,7 @@ body {
     justify-content: center;
 }
 
+/* Estilos para a classe 'input' */
 .input {
     display: flex;
     flex-direction: column;
@@ -51,30 +58,35 @@ body {
     margin-left: 30%;
 }
 
+/* Estilos para a classe 'input2' */
 .input2 {
     width: 50%;
     display: flex;
     flex-direction: column;
     margin-left: 30%;
-
 }
 
+/* Estilos para o botão com o ID 'btnLogin' */
 #btnLogin {
     background-color: #2A8A5C;
 }
 
+/* Estilos para o botão com o ID 'btnLogin' ao passar o mouse por cima */
 #btnLogin:hover {
     background-color: #15b065;
 }
 
-/* Responsividade geral */
+/* Responsividade geral para telas menores que 768px */
 @media only screen and (max-width: 768px) {
+
+    /* Ajustes para a classe 'tipos' */
     .tipos {
         margin-left: 0;
         text-align: center;
         font-size: 15px;
     }
 
+    /* Ajustes para as classes 'informacoes', 'informacoes2', 'faleConosco', 'input', 'input2' */
     .informacoes,
     .informacoes2,
     .faleConosco,
@@ -84,12 +96,14 @@ body {
         margin-left: 5%;
     }
 
+    /* Ajustes para as classes 'input' e 'input2' */
     .input,
     .input2 {
         width: 90%;
         margin-left: 5%;
     }
 
+    /* Ajustes para o botão com o ID 'btnLogin' */
     #btnLogin {
         width: 100%;
     }

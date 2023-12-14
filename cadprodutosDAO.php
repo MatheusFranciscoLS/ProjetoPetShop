@@ -36,41 +36,21 @@ if ($_POST['enviarDados'] == 'cad') { // CADASTRAR!!!
     if (
         isset($_POST) && isset($_FILES["imagem"]["name"]) && !empty($_POST) && (!empty($_FILES["imagem"]["name"]))
     ) {
-
-
-
-
-
-
         $stmt = $conn->prepare("INSERT INTO produto ( prod_img, id, nome, tipo,categoria, marca, descricao, valor, qtd)  VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
 
         $imagem_completa = $imagem . "1." . $extensao1;
         $stmt->bind_param("sssssssss", $imagem_completa, $id, $nome, $tipo, $categoria, $marca, $descricao, $valor, $qtd);
 
         if ($stmt->execute()) {
-
-
             header("location:cadastroproduto.php?msgSucesso=Cadastro realizado com sucesso!");
-
-
         } else {
             header("Location: cadastroproduto.php?msgErro=Falha ao cadastrar...");
         }
     } else {
         header("Location: cadastroproduto.php?msgErro=Falha...");
-
-
     }
 } elseif ($_POST['enviarDados'] == 'alt') {
-
-
-
-
     $query = "UPDATE produto SET  prod_img='$imagem/1.$extensao1', nome='$nome', tipo='$tipo', categoria='$categoria', marca='$marca', descricao='$descricao', valor='$valor', qtd='$qtd' WHERE id = $id";
-
-
-
-
 
     if (mysqli_query($conn, $query)) {
         header("location:cadastroproduto.php?msgSucesso=Dados alterados com sucesso!");
