@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['usuario'] = $loginUsuario; // Definindo variável de sessão
             if ($tipoConta === "C") {
                 $_SESSION['tipo'] = $tipoConta;
-                header("location:login.php?msgSucesso=Login bem-sucedido!");
+                header("location:index.php?msgSucesso=Login bem-sucedido!");
                 
             } elseif ($tipoConta === "F") {
                 $_SESSION['tipo'] = $tipoConta;
